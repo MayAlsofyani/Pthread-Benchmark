@@ -40,7 +40,6 @@ The **Pthread-Benchmark** aims to:
 ## Citation
 
 If you use this benchmark in your research or projects, please cite this repository:
-
 https://github.com/MayAlsofyani/Pthread-Benchmark
 
 ### References
