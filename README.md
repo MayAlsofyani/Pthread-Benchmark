@@ -41,10 +41,21 @@ The **Pthread-Benchmark** aims to:
 
 If you use this benchmark in your research or projects, please cite this repository:
 
-[Your Repository Name](https://github.com/your-repository-link)
+https://github.com/MayAlsofyani/Pthread-Benchmark
 
 ### References
 
 This benchmark was inspired by or built upon work from the following repository:
-- [Referenced Repository Name](https://github.com/referenced-repository-link)
+- https://github.com/tarcisiodarocha/ExemplosPthreads
+- https://github.com/coapp-packages/pthreads
+- https://github.com/Veinin/POSIX-threads-programming-tutorials
+- https://github.com/zly5/Parallel-Computing-Lab
+- https://github.com/junstar92/parallel_programming_study
+- https://github.com/JunhuaiYang/PthreadPool
+- https://github.com/manasesjesus/pthreads
+- https://github.com/imsure/parallel-programming
+- https://github.com/ishanthilina/Pthreads-Monte-Carlo-Pi-Calculation
+- https://github.com/snikulov/prog_posix_threads
+- https://github.com/hailinzeng/Programming-POSIX-Threads
+  
 
