@@ -31,7 +31,7 @@ To create a balanced dataset:
 - **Fixed Files:** 44 source code files with proper mutex synchronization.
   
 ### Code Characteristics
-- The source code files in this benchmark range from a **minimum of 50 lines** to a **maximum of 200 lines**.
+- The source code files in this benchmark range from a **minimum of ~50 lines** to a **maximum of ~200 lines**.
 - This range ensures a manageable size for analysis while retaining realistic complexity for concurrency studies.
 
 ## Purpose
