@@ -103,5 +103,6 @@ This benchmark was inspired by or built upon work from the following repository:
 - https://github.com/ishanthilina/Pthreads-Monte-Carlo-Pi-Calculation
 - https://github.com/snikulov/prog_posix_threads
 - https://github.com/hailinzeng/Programming-POSIX-Threads
-  
+- https://github.com/sysprog21/mergesort-concurrent
+- .......
 
