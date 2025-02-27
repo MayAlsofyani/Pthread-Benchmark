@@ -1,0 +1,46 @@
+File,Mutex (memory address for actual variable),Direct Access Count,Function Call Count,Function Calls
+10practice.c,&lock_flag,2,2,"printf, if"
+10practice.c,&lock_flag,2,2,"printf, if"
+10practice.c,&lock_flag,2,2,"printf, if"
+cfgSock.c,&s_atomic,3,8,"if, cfgSockRequest, snprintf"
+cfgSock.c,&s_atomic,3,4,"if, cfgSockRequest, snprintf"
+cfgSock.c,&s_atomic,2,1,cfgSockRequest
+hashInvertM.c,&m_nextLoc,1,2,"ceilDiv, if"
+hashInvertM.c,&m_nextLoc,1,2,"ceilDiv, if"
+hashInvertM.c,&m_nextLoc,1,2,"ceilDiv, if"
+hashInvertM.c,&m_totalOnes,0,0,
+hashInvertM.c,&m_numMemberships,0,0,
+perf_index.c,&ready_thread_count_lock,1,3,"pthread_cond_signal, if, pthread_cond_wait"
+perf_index.c,&ready_thread_count_lock,0,2,"if, pthread_cond_wait"
+assignment2question2.c,&m1,1,0,
+assignment2question2.c,&m1,1,0,
+assignment2question2.c,&m1,1,0,
+assignment2question2.c,&m2,3,5,"perror, malloc, if, sizeof"
+multhread_server.c,&mut,2,2,"for, if"
+multhread_server.c,&mut,1,2,"for, if"
+multhread_server.c,&mut,0,1,strncpy
+multhread_server.c,&mut,2,7,"sizeof, for, strlen, write, if, memset"
+multhread_server.c,&mut,0,3,"strlen, printf, if"
+06mutex.c,&m,2,1,printf
+06mutex.c,&m,2,6,"pthread_create, for, printf, perror, if, scanf"
+06mutex.c,&m,0,0,
+06test_pro_con.c,&mutex,1,1,printf
+06test_pro_con.c,&mutex,2,4,"printf, pthread_cond_wait, while"
+124mutex.c,&work_mutex,0,4,"printf, fgets, while, pthread_cond_signal"
+124mutex.c,&work_mutex,0,2,"pthread_cond_wait, while"
+124mutex.c,&work_mutex,1,7,"printf, pthread_cond_signal, while, strlen, pthread_cond_wait, strncmp"
+asttest.c,&mutex,1,1,pthread_cond_signal
+asttest.c,&mutex,0,1,while
+asttest.c,&mutex,1,0,
+asttest.c,&mutex,4,11,"fprintf, printf, strlen, perror, dlm_pthread_init, if, pthread_cond_wait, dlm_lock"
+camera_thread.c,&mutex,1,3,"perror, malloc, if"
+camera_thread.c,&mutex,0,3,"perror, if, pthread_cond_wait"
+camera_thread.c,&mutex,0,3,"perror, if, pthread_cond_wait"
+dns-discovery.c,&mutexsum,6,12,"fprintf, inet_ntop, for, printf, if, switch"
+dns-discovery.c,&mutexsum,0,5,"sizeof, fgets, while, rewind, fputs"
+ir_event.c,&mutex1,0,5,"handle_error, if, mpd_connection_clear_error, mpd_run_change_volume"
+ir_event.c,&mutex1,5,31,"get_status, finish_command, mpd_run_change_volume, mpd_run_stop, mpd_connection_clear_error, mpd_send_pause, mpd_status_free, if, mpd_run_play, switch, handle_error, mpd_status_get_state, log_message"
+ping_pong.c,&thr_cond_lock,2,6,"printf, pthread_cond_signal, while, if, pthread_cond_wait, ping"
+ping_pong.c,&thr_cond_lock,1,3,"pthread_cond_signal, if, pthread_cond_wait"
+semaphore_mutex_release.c,pmutex,0,2,"pthread_barrier_wait, clock_gettime"
+servofpga.c,&spi_mutex,8,4,"ioctl, if, perror, SPI_IOC_MESSAGE"
