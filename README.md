@@ -34,6 +34,18 @@ To create a balanced dataset:
 - The source code files in this benchmark range from a **minimum of ~50 lines** to a **maximum of ~200 lines**.
 - This range ensures a manageable size for analysis while retaining realistic complexity for concurrency studies.
 
+- import pandas as pd
+
+# Load CSV file
+df = pd.read_csv("your_file.csv")
+
+# Select first 4 rows (or any specific rows)
+df_subset = df.head(4)  # Change the range if needed
+
+# Convert to Markdown
+print(df_subset.to_markdown(index=False))
+
+
 ## Purpose
 The **Pthread-Benchmark** aims to:
 1. Serve as a resource for research on concurrency bugs, specifically data races.
