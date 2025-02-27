@@ -34,16 +34,47 @@ To create a balanced dataset:
 - The source code files in this benchmark range from a **minimum of ~50 lines** to a **maximum of ~200 lines**.
 - This range ensures a manageable size for analysis while retaining realistic complexity for concurrency studies.
 
-- import pandas as pd
+| File                        | Mutex (memory address for actual variable)   |   Direct Access Count |   Function Call Count | Function Calls                                              |
+|:----------------------------|:---------------------------------------------|----------------------:|----------------------:|:------------------------------------------------------------|
+| thread_with_conditions.c    | &count_mutex                                 |                     3 |                     7 | inc_count, printf, if, pthread_cond_signal                  |
+| thread_with_conditions.c    | &count_mutex                                 |                     3 |                    12 | printf, pthread_cond_wait, watch_count, while               |
+| zad_dom1.c                  | &mutex                                       |                     1 |                     5 | pop_f, printf, if, display                                  |
+| zad_dom1.c                  | &mutex                                       |                     0 |                     3 | push_f, printf, display                                     |
+| 06_thread_cond_var.c        | &count_mutex                                 |                     3 |                     7 | inc_count, printf, if, pthread_cond_signal                  |
+| 06_thread_cond_var.c        | &count_mutex                                 |                     3 |                    12 | printf, pthread_cond_wait, watch_count, while               |
+| udp_server.c                | &mutex1                                      |                     1 |                     0 | nan                                                         |
+| udp_server.c                | &mutex1                                      |                     0 |                     0 | nan                                                         |
+| 023_sync_mutex.c            | &my_mutex                                    |                     2 |                     5 | if, strcpy                                                  |
+| 023_sync_mutex.c            | &my_mutex                                    |                     0 |                     2 | memcpy, sizeof                                              |
+| 02test.c                    | &mutex                                       |                     3 |                     4 | for, printf, setbuf, pthread_self                           |
+| 02test.c                    | &mutex                                       |                     3 |                     4 | for, printf, setbuf, pthread_self                           |
+| 02.c                        | &mutex                                       |                     3 |                     4 | printf, pthread_cond_wait, while                            |
+| 02.c                        | &mutex                                       |                     4 |                     6 | malloc, sizeof, printf, pthread_cond_signal, memset         |
+| 06test_pro_con.c            | &mutex                                       |                     1 |                     1 | printf                                                      |
+| 06test_pro_con.c            | &mutex                                       |                     2 |                     4 | printf, pthread_cond_wait, while                            |
+| 02_condition_modify.c       | &mutex                                       |                     2 |                     2 | printf, pthread_self                                        |
+| 02_condition_modify.c       | &mutex                                       |                     3 |                     5 | printf, free, if, pthread_cond_wait, pthread_self           |
+| 11-14UseConditionVariable.c | &count_mutex                                 |                     2 |                     7 | inc_count, printf, if, pthread_cond_signal                  |
+| 11-14UseConditionVariable.c | &count_mutex                                 |                     1 |                     8 | printf, pthread_cond_wait, watch_count, while               |
+| copy_deamon.c               | &offsetMutex                                 |                     1 |                     3 | pread, if, sizeof                                           |
+| copy_deamon.c               | &offsetMutex                                 |                     0 |                     4 | recv, sendMessage, sizeof, sprintf                          |
+| concurio.c                  | &timerlock                                   |                     2 |                     2 | pthread_cond_timedwait, while                               |
+| concurio.c                  | &worker_sync_lock                            |                     0 |                     0 | nan                                                         |
+| concurio.c                  | &worker_sync_lock                            |                     0 |                     2 | pthread_cond_wait, while                                    |
+| concurio.c                  | &worker_sync_lock                            |                     1 |                     1 | pthread_cond_broadcast                                      |
+| concurio.c                  | &worker_sync_lock                            |                     0 |                     0 | nan                                                         |
+| pth_pool.c                  | &mutex                                       |                     3 |                     3 | for, pthread_cond_wait, while                               |
+| pth_pool.c                  | &mutex                                       |                     1 |                     2 | pthread_cond_wait, while                                    |
+| PThread-synchronization.c   | &mutex                                       |                     0 |                     3 | usleep, if, printf                                          |
+| PThread-synchronization.c   | &mutex                                       |                     0 |                     3 | usleep, if, printf                                          |
+| employee_with_mutex.c       | &lock                                        |                     0 |                     1 | copy_employee                                               |
+| employee_with_mutex.c       | &lock                                        |                     1 |                    24 | strcmp, s, printf, exit, if, d                              |
+| hot_plate_barriers.c        | &runnable                                    |                     2 |                     0 | nan                                                         |
+| hot_plate_barriers.c        | &critical_begin_end                          |                     4 |                     3 | pthread_create, malloc, sizeof                              |
+| 6.c                         | &count_mutex                                 |                     2 |                     4 | inc_count, pthread_cond_broadcast, if                       |
+| 6.c                         | &count_mutex                                 |                     3 |                     7 | pthread_cond_wait, watch_count, while                       |
+| helper.c                    | &m                                           |                     5 |                    11 | fprintf, gettimeofday, pthread_cond_timedwait, strerror, if |
 
-# Load CSV file
-df = pd.read_csv("your_file.csv")
-
-# Select first 4 rows (or any specific rows)
-df_subset = df.head(4)  # Change the range if needed
-
-# Convert to Markdown
-print(df_subset.to_markdown(index=False))
 
 
 ## Purpose
