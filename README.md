@@ -33,6 +33,7 @@ To create a balanced dataset:
 ### Code Characteristics
 - The source code files in this benchmark range from a **minimum of ~50 lines** to a **maximum of ~200 lines**.
 - This range ensures a manageable size for analysis while retaining realistic complexity for concurrency studies.
+- The table below provides examples of statistics from **Benchmark 1 (One Bug)** on whether the shared variables are used directly in the code between the mutex acquisition and release or if they involve more elaborate access patterns with function nesting.
 
 | File                        | Mutex (memory address for actual variable)   |   Direct Access Count |   Function Call Count | Function Calls                                              |
 |:----------------------------|:---------------------------------------------|----------------------:|----------------------:|:------------------------------------------------------------|
